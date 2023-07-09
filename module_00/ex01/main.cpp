@@ -6,27 +6,22 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 08:24:11 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/08 22:41:43 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/09 08:35:24 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void	instructions_header(void)
+void	main_header(void)
 {
 	std::cout << CLEAR;
-	std::cout << "/* ********************************************/" << std::endl;
-	std::cout << "/*                                            */" << std::endl;
-	std::cout << "/*          Welcome to phonebook app          */" << std::endl;
-	std::cout << "/*                                            */" << std::endl;
-	std::cout << "/*  plese insert one of the follow commands:  */" << std::endl;
-	std::cout << "/*                                            */" << std::endl;
-	std::cout << "/*  ADD    - create a new contact             */" << std::endl;
-	std::cout << "/*  SEARCH - display a existent contact       */" << std::endl;
-	std::cout << "/*  EXIT   - exits the app                    */" << std::endl;
-	std::cout << "/*                                            */" << std::endl;
-	std::cout << "/* ********************************************/" << std::endl;
-	std::cout << std::endl;
+	std::cout << "**********************************" << std::endl;
+	std::cout << "*       80's PHONEBOOK APP       *" << std::endl;
+	std::cout << "**********************************" << std::endl << std::endl;
+	std::cout << "Available commands:" << std::endl;
+	std::cout << "- ADD" << std::endl;
+	std::cout << "- SEARCH" << std::endl;
+	std::cout << "- EXIT" << std::endl << std::endl;
 }
 
 int	main(void)
@@ -38,7 +33,7 @@ int	main(void)
 	while (1)
 	{
 		if (!invalid_command)
-			instructions_header();
+			main_header();
 		std::cout << "Enter a command: ";
 		std::getline(std::cin, user_input);
 		if (user_input == "ADD")

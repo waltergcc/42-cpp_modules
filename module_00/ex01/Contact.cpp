@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 21:53:33 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/08 22:49:21 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/09 09:09:52 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,16 @@ Contact::Contact(std::string firstName, std::string lastName, \
 
 void Contact::displayContact(void)
 {
-	std::cout << std::endl;
+
+	std::cout << CLEAR;
+	std::cout << "**********************************" << std::endl;
+	std::cout << "*          CONTACT VIEWER        *" << std::endl;
+	std::cout << "**********************************" << std::endl << std::endl;
 	std::cout << "First name: " << this->_firstName << std::endl;
 	std::cout << "Last name: " << this->_lastName << std::endl;
 	std::cout << "Nickname: " << this->_nickname << std::endl;
 	std::cout << "Phone number: " << this->_phone << std::endl;
-	std::cout << "Darkest secret: " << this->_secret << std::endl;
-	std::cout << std::endl;
+	std::cout << "Darkest secret: " << this->_secret << std::endl << std::endl;
 }
 
 std::string	Contact::getFirstName(void)
