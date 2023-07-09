@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 21:50:26 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/09 01:08:13 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/09 09:13:40 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,11 @@ class	Contact
 	
 		Contact(void);
 		~Contact(void);
-		Contact(std::string firstName, std::string lastName, \
-			std::string nickname, std::string phone, std::string secret);
-		void	displayContact(void);
-		std::string	getFirstName(void);
-		std::string	getLastName(void);
-		std::string	getNickname(void);
+		Contact(std::string firstName, std::string lastName, std::string nickname, std::string phone, std::string secret);
+		void				displayContact(void);
+		std::string			getFirstName(void);
+		std::string			getLastName(void);
+		std::string			getNickname(void);
 		static std::string	formatWidth(std::string field);
 
 	private:
