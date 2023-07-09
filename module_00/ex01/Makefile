@@ -6,7 +6,7 @@
 #    By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/07 17:07:34 by wcorrea-          #+#    #+#              #
-#    Updated: 2023/07/08 22:04:54 by wcorrea-         ###   ########.fr        #
+#    Updated: 2023/07/09 09:39:17 by wcorrea-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,18 +14,26 @@ NAME = phonebook
 
 SRC = main.cpp PhoneBook.cpp Contact.cpp
 
+OBJS = ${SRC:.cpp=.o}
+
 INCLUDE = -I .
 
 CC = c++
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-$(NAME):
-		${CC} ${CFLAGS} ${INCLUDE} ${SRC} -o ${NAME}
+.cpp.o:
+		${CC} ${CFLAGS} ${INCLUDE} -c $< -o ${<:.cpp=.o}
+
+$(NAME): ${OBJS}
+		${CC} ${CFLAGS} ${INCLUDE} ${OBJS} -o ${NAME}
 
 all:	${NAME}
 
 clean:
+		${RM} ${OBJS}
+
+fclean:	clean
 		${RM} ${NAME}
 
 re: clean all
