@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 17:19:52 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/11 18:29:01 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/11 18:32:26 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,19 @@ int	main(void)
 	mainHeader();
 	pressEnter();
 	
-	std::cout << "***** level DEBUG *****" << std::endl << std::endl;
+	std::cout << "[ DEBUG ]" << std::endl << std::endl;
 	harl.complain("DEBUG");
 	pressEnter();
 
-	std::cout << "***** level INFO *****" << std::endl << std::endl;
+	std::cout << "[ INFO ]" << std::endl << std::endl;
 	harl.complain("INFO");
 	pressEnter();
 
-	std::cout << "***** level WARNING *****" << std::endl << std::endl;
+	std::cout << "[ WARNING ]" << std::endl << std::endl;
 	harl.complain("WARNING");
 	pressEnter();
 
-	std::cout << "***** level ERROR *****" << std::endl << std::endl;
+	std::cout << "[ ERROR ]" << std::endl << std::endl;
 	harl.complain("ERROR");
 	pressEnter();
 }
