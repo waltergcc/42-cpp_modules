@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 16:12:22 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/11 16:27:07 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/13 12:25:33 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Weapon
 	public:
 		Weapon(std::string type);
 		~Weapon();
-		std::string &getType(void);
+		const std::string &getType(void);
 		void setType(std::string type);
 
 	private:

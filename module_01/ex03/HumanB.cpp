@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 16:15:56 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/11 16:30:58 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/13 12:19:24 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 HumanB::HumanB(std::string name) : _name(name)
 {
-	this->_weapon = 0;
+	this->_weapon = NULL;
 }
 
 HumanB::~HumanB(void){}

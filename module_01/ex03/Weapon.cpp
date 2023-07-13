@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 16:18:05 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/11 16:19:59 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/13 12:25:24 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Weapon::Weapon(std::string type) : _type(type){}
 
 Weapon::~Weapon(void){}
 
-std::string &Weapon::getType(void)
+const std::string &Weapon::getType(void)
 {
 	return (this->_type);
 }
