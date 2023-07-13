@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 16:42:37 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/13 18:36:13 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/13 18:39:29 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed
 	private:
 		// Variables
 		int					_value;
-		static const int	_bits = 16;
+		static const int	_bits = 8;
 			
 	public:
 		// Constructors
