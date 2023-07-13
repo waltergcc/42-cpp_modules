@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 17:10:30 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/11 15:31:01 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/13 11:49:21 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ class Zombie
 		std::string _name;
 };
 
-Zombie	*zombieHorde(int n, std::string name);
+Zombie	*zombieHorde(int N, std::string name);
 
 #endif

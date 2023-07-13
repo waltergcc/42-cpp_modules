@@ -6,11 +6,19 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 17:19:52 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/11 15:44:16 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/13 11:53:43 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+void	mainHeader(void)
+{
+	std::cout << "\033c";
+	std::cout << "**********************************" << std::endl;
+	std::cout << "*         OUR C++ ZOMBIES        *" << std::endl;
+	std::cout << "**********************************" << std::endl << std::endl;
+}
 
 int	main(void)
 {
@@ -18,9 +26,7 @@ int	main(void)
 	int			hordeSize;
 	Zombie 		*zombie;
 
-	std::cout << "********************************" << std::endl;
-	std::cout << "*        OUR C++ ZOMBIES       *" << std::endl;
-	std::cout << "********************************" << std::endl << std::endl;
+	mainHeader();
 	while (1)
 	{
 		std::cout << "Enter the size of the zombie's horde: " << std::endl;
@@ -37,6 +43,7 @@ int	main(void)
 	std::cout << "Now enter a name for your zombies class: " << std::endl;
 	std::cin >> zombiesClass;
 	
+	mainHeader();
 	zombie = zombieHorde(hordeSize, zombiesClass);
 	for (int i = 0; i < hordeSize; i++)
 		zombie[i].announce();
