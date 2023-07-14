@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 16:42:37 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/13 19:22:10 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/14 04:46:16 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ class Fixed
 		
 		// Overload arithmetic operators
 		Fixed &operator=(Fixed const &copy);
-		Fixed operator+(Fixed const &copy);
-		Fixed operator-(Fixed const &copy);
-		Fixed operator*(Fixed const &copy);
-		Fixed operator/(Fixed const &copy);
+		Fixed operator+(Fixed const &copy) const;
+		Fixed operator-(Fixed const &copy) const;
+		Fixed operator*(Fixed const &copy) const;
+		Fixed operator/(Fixed const &copy) const;
 
 		// Overload comparison operators
 		bool operator>(Fixed const &copy) const;

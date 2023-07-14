@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 16:46:57 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/13 19:24:58 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/14 04:45:49 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,22 +46,22 @@ Fixed &Fixed::operator=(Fixed const &copy)
 	return (*this);
 }
 
-Fixed Fixed::operator+(Fixed const &copy)
+Fixed Fixed::operator+(Fixed const &copy) const
 {
 	return (Fixed(this->toFloat() + copy.toFloat()));
 }
 
-Fixed Fixed::operator-(Fixed const &copy)
+Fixed Fixed::operator-(Fixed const &copy) const
 {
 	return (Fixed(this->toFloat() - copy.toFloat()));
 }
 
-Fixed Fixed::operator*(Fixed const &copy)
+Fixed Fixed::operator*(Fixed const &copy) const
 {
 	return (Fixed(this->toFloat() * copy.toFloat()));
 }
 
-Fixed Fixed::operator/(Fixed const &copy)
+Fixed Fixed::operator/(Fixed const &copy) const
 {
 	return (Fixed(this->toFloat() / copy.toFloat()));
 }
