@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 16:37:29 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/15 11:16:01 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/15 11:18:02 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void drawTriangle(Point a, Point b, Point c, Point p, int mode)
     Fixed	maxY = Fixed::max(Fixed::max(a.getY(), b.getY()), c.getY());
     int		width = maxX.toInt() - minX.toInt() + 3;
     int		height = maxY.toInt() - minY.toInt() + 3;
-    // char	grid[height][width];
 
 	char	**grid = createGrid(height, width);
     for (int y = 0; y < height; y++)
