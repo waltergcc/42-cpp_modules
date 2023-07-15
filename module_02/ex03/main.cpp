@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 16:37:29 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/14 03:40:12 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/15 11:16:01 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,24 @@
 #define RESET "\033[0m"
 #define BOLD "\033[1m"
 
+char	**createGrid(int height, int width)
+{
+	char** grid = new char*[height];
+	
+    for (int i = 0; i < height; i++)
+	{
+        grid[i] = new char[width];
+	}
+	return (grid);
+}
+
+void	deleteGrid(char** grid, int height)
+{
+	for (int i = 0; i < height; i++)
+		delete[] grid[i];
+	delete[] grid;
+}
+
 void drawTriangle(Point a, Point b, Point c, Point p, int mode)
 {
 	char	fill = 'X';
@@ -32,8 +50,9 @@ void drawTriangle(Point a, Point b, Point c, Point p, int mode)
     Fixed	maxY = Fixed::max(Fixed::max(a.getY(), b.getY()), c.getY());
     int		width = maxX.toInt() - minX.toInt() + 3;
     int		height = maxY.toInt() - minY.toInt() + 3;
-    char	grid[height][width];
+    // char	grid[height][width];
 
+	char	**grid = createGrid(height, width);
     for (int y = 0; y < height; y++)
     {
         for (int x = 0; x < width; x++)
@@ -65,6 +84,7 @@ void drawTriangle(Point a, Point b, Point c, Point p, int mode)
         }
         std::cout << std::endl;
     }
+	deleteGrid(grid, height);
 }
 
 void	mainHeader(void)
@@ -95,8 +115,8 @@ int main(void)
 	mainHeader();
 	drawTriangle(a, b, c, Point(x, y), 1);
 	if (bsp(a, b, c, Point(x, y)))
-		std::cout << GREEN << "\n\tThe position (" << x << "," << y << ") is inside the triangle" << std::endl << std::endl;
+		std::cout << GREEN << "\n\tThe position (" << x << "," << y << ") is inside the triangle" << RESET << std::endl << std::endl;
 	else
-		std::cout << RED << "\n\tThe position (" << x << "," << y << ") is outside the triangle" << std::endl << std::endl;
+		std::cout << RED << "\n\tThe position (" << x << "," << y << ") is outside the triangle" << RESET << std::endl << std::endl;
 	return 0;
 }
