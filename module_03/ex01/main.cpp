@@ -6,11 +6,11 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 14:02:28 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/17 17:53:28 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/17 18:22:10 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 void	pressEnter(void)
 {
@@ -37,35 +37,43 @@ void titleHeader(const std::string& message)
 
 int	main(void)
 {
-	titleHeader("CLAPTRAP DEFAULT");
-	ClapTrap	firstRobot;
+	titleHeader("SCAVTRAP DEFAULT");
+	ScavTrap	firstRobot;
 
 	firstRobot.attack("invasors");
 	std::cout << firstRobot << std::endl;
-	firstRobot.takeDamage(5);
+	firstRobot.takeDamage(9);
 	std::cout << firstRobot << std::endl;
 	firstRobot.beRepaired(5);
 	std::cout << firstRobot << std::endl;
-	firstRobot.takeDamage(15);
+	firstRobot.guardGate();
 	std::cout << firstRobot << std::endl;
+	firstRobot.takeDamage(100);
+	std::cout << firstRobot << std::endl;
+	firstRobot.beRepaired(50);
 	firstRobot.attack("traitors");
 	pressEnter();
 
-	titleHeader("CLAPTRAP SPECIFIC");
-	ClapTrap	secondRobot("Version 2.0");
+	titleHeader("SCAVTRAP SPECIFIC");
+	ScavTrap	secondRobot("Scav3000");
+	
 	secondRobot.attack("invasors");
 	std::cout << secondRobot << std::endl;
-	secondRobot.takeDamage(9);
+	secondRobot.takeDamage(78);
 	std::cout << secondRobot << std::endl;
-	secondRobot.beRepaired(1);
+	secondRobot.beRepaired(89);
 	std::cout << secondRobot << std::endl;
-	secondRobot.takeDamage(2);
+	secondRobot.guardGate();
 	std::cout << secondRobot << std::endl;
-	secondRobot.beRepaired(2);
+	secondRobot.attack("monsters");
+	std::cout << secondRobot << std::endl;
+	secondRobot.takeDamage(200);
+	std::cout << secondRobot << std::endl;
+	secondRobot.attack("monsters");
 	pressEnter();
 
-	titleHeader("CLAPTRAP COPY");
-	ClapTrap	thirdRobot(secondRobot);
+	titleHeader("SCAVTRAP COPY");
+	ScavTrap	thirdRobot(secondRobot);
 	thirdRobot.attack("traitors");
 	std::cout << thirdRobot << std::endl;
 	pressEnter();
