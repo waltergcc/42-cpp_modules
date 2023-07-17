@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 14:03:44 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/17 16:29:10 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/17 22:22:43 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 std::ostream	&operator<<(std::ostream &out, ClapTrap const &trap)
 {
 	out << "ClapTrap " << trap.getName() << " has " << trap.getHitPoints() << " HP and ";
-	out << trap.getEnergyPoints() << " battery life.";
+	out << trap.getEnergyPoints() << " energy points.";
 	return (out);
 }
