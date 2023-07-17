@@ -6,11 +6,11 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 14:02:28 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/17 19:37:13 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/17 19:51:44 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 void	pressEnter(void)
 {
@@ -37,8 +37,8 @@ void titleHeader(const std::string& message)
 
 int	main(void)
 {
-	titleHeader("SCAVTRAP DEFAULT");
-	ScavTrap	firstRobot;
+	titleHeader("FRAGTRAP DEFAULT");
+	FragTrap	firstRobot;
 
 	firstRobot.attack("invasors");
 	std::cout << firstRobot << std::endl;
@@ -46,7 +46,7 @@ int	main(void)
 	std::cout << firstRobot << std::endl;
 	firstRobot.beRepaired(5);
 	std::cout << firstRobot << std::endl;
-	firstRobot.guardGate();
+	firstRobot.highFivesGuys();
 	std::cout << firstRobot << std::endl;
 	firstRobot.takeDamage(100);
 	std::cout << firstRobot << std::endl;
@@ -54,8 +54,8 @@ int	main(void)
 	firstRobot.attack("traitors");
 	pressEnter();
 
-	titleHeader("SCAVTRAP SPECIFIC");
-	ScavTrap	secondRobot("Scav3000");
+	titleHeader("FRAGTRAP SPECIFIC");
+	FragTrap	secondRobot("FragHyperX");
 	
 	secondRobot.attack("invasors");
 	std::cout << secondRobot << std::endl;
@@ -63,7 +63,7 @@ int	main(void)
 	std::cout << secondRobot << std::endl;
 	secondRobot.beRepaired(89);
 	std::cout << secondRobot << std::endl;
-	secondRobot.guardGate();
+	secondRobot.highFivesGuys();
 	std::cout << secondRobot << std::endl;
 	secondRobot.attack("monsters");
 	std::cout << secondRobot << std::endl;
@@ -72,11 +72,11 @@ int	main(void)
 	secondRobot.attack("monsters");
 	pressEnter();
 
-	titleHeader("SCAVTRAP COPY");
-	ScavTrap	thirdRobot(secondRobot);
+	titleHeader("FRAGTRAP COPY");
+	FragTrap	thirdRobot(secondRobot);
 	thirdRobot.attack("traitors");
 	std::cout << thirdRobot << std::endl;
 	pressEnter();
 
-	titleHeader("SCAVTRAP DESTUCTORS");
+	titleHeader("FRAGTRAP DESTUCTORS");
 }
