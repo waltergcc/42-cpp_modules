@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 18:45:06 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/17 19:41:21 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/17 20:02:31 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 FragTrap::FragTrap(void)
 {
-	std::cout << "FlagTrap default constructor called" << std::endl;
+	std::cout << "FragTrap default constructor called" << std::endl;
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
@@ -24,7 +24,7 @@ FragTrap::FragTrap(void)
 
 FragTrap::FragTrap(std::string const name) : ClapTrap(name)
 {
-	std::cout << "FlagTrap constructor with parameter called" << std::endl;
+	std::cout << "FragTrap constructor with parameter called" << std::endl;
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
@@ -32,12 +32,12 @@ FragTrap::FragTrap(std::string const name) : ClapTrap(name)
 
 FragTrap::FragTrap(FragTrap const &copy) : ClapTrap(copy)
 {
-	std::cout << "FlagTrap copy constructor called" << std::endl;
+	std::cout << "FragTrap copy constructor called" << std::endl;
 }
 
 FragTrap::~FragTrap(void)
 {
-	std::cout << "FlagTrap destructor called" << std::endl;
+	std::cout << "FragTrap destructor called" << std::endl;
 }
 
 // --------------------------- OPERATORS ----------------------------------
@@ -59,15 +59,15 @@ void	FragTrap::attack(std::string const &target)
 {
 	if (!this->_energyPoints || !this->_hitPoints)
 	{
-		std::cout << "FlagTrap " << this->_name << " is out of action!" << std::endl;
+		std::cout << "FragTrap " << this->_name << " is out of action!" << std::endl;
 		return ;
 	}
-	std::cout << "FlagTrap " << this->_name << " attacks " << target;
+	std::cout << "FragTrap " << this->_name << " attacks " << target;
 	std::cout << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
 	this->_energyPoints--;
 }
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "FlagTrap " << this->_name << " high fives everyone!" << std::endl;
+	std::cout << "FragTrap " << this->_name << " high fives everyone!" << std::endl;
 }
