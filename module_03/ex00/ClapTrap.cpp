@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 14:03:44 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/17 15:49:06 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/17 16:29:10 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ bool	ClapTrap::isGameOver(void)
 {
 	if (!this->_energyPoints || !this->_hitPoints)
 	{
-		std::cout << "ClapTrap " << this->_name << " reach the end!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " is out of action!" << std::endl;
 		return (true);
 	}
 	return (false);
@@ -89,7 +89,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	this->_hitPoints -= amount;
 	if (this->_hitPoints < 0)
 		this->_hitPoints = 0;
-	std::cout << "ClapTrap " << this->_name << " loose " << amount << " points of strength!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " loose " << amount << " HP!" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
@@ -97,13 +97,13 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	if (this->isGameOver())
 		return ;
 	this->_hitPoints += amount;
-	std::cout << "ClapTrap " << this->_name << " is repaired with " << amount << " points!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " is repaired with " << amount << " HP!" << std::endl;
 	this->_energyPoints--;
 }
 
 std::ostream	&operator<<(std::ostream &out, ClapTrap const &trap)
 {
-	out << "ClapTrap " << trap.getName() << " has " << trap.getHitPoints() << " strength points and ";
-	out << trap.getEnergyPoints() << " energy points.";
+	out << "ClapTrap " << trap.getName() << " has " << trap.getHitPoints() << " HP and ";
+	out << trap.getEnergyPoints() << " battery life.";
 	return (out);
 }

@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 14:02:28 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/17 16:14:16 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/17 16:23:01 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,36 +38,36 @@ void titleHeader(const std::string& message)
 int	main(void)
 {
 	titleHeader("CLAPTRAP DEFAULT");
-	ClapTrap	boringTalk;
+	ClapTrap	FirstRobot;
 
-	boringTalk.attack("people's time");
-	std::cout << boringTalk << std::endl;
-	boringTalk.takeDamage(5);
-	std::cout << boringTalk << std::endl;
-	boringTalk.beRepaired(5);
-	std::cout << boringTalk << std::endl;
-	boringTalk.takeDamage(15);
-	std::cout << boringTalk << std::endl;
-	boringTalk.attack("people's time again");
+	FirstRobot.attack("invasors");
+	std::cout << FirstRobot << std::endl;
+	FirstRobot.takeDamage(5);
+	std::cout << FirstRobot << std::endl;
+	FirstRobot.beRepaired(5);
+	std::cout << FirstRobot << std::endl;
+	FirstRobot.takeDamage(15);
+	std::cout << FirstRobot << std::endl;
+	FirstRobot.attack("traitors");
 	pressEnter();
 
 	titleHeader("CLAPTRAP SPECIFIC");
-	ClapTrap	pyramidScheme("Pyramid Scheme");
-	pyramidScheme.attack("people's wallet");
-	std::cout << pyramidScheme << std::endl;
-	pyramidScheme.takeDamage(9);
-	std::cout << pyramidScheme << std::endl;
-	pyramidScheme.beRepaired(1);
-	std::cout << pyramidScheme << std::endl;
-	pyramidScheme.takeDamage(2);
-	std::cout << pyramidScheme << std::endl;
-	pyramidScheme.beRepaired(2);
+	ClapTrap	SecondRobot("Version 2.0");
+	SecondRobot.attack("invasors");
+	std::cout << SecondRobot << std::endl;
+	SecondRobot.takeDamage(9);
+	std::cout << SecondRobot << std::endl;
+	SecondRobot.beRepaired(1);
+	std::cout << SecondRobot << std::endl;
+	SecondRobot.takeDamage(2);
+	std::cout << SecondRobot << std::endl;
+	SecondRobot.beRepaired(2);
 	pressEnter();
 
 	titleHeader("CLAPTRAP COPY");
-	ClapTrap	newScheme(pyramidScheme);
-	newScheme.attack("people's wallet again");
-	std::cout << newScheme << std::endl;
+	ClapTrap	thirdRobot(SecondRobot);
+	thirdRobot.attack("traitors");
+	std::cout << thirdRobot << std::endl;
 	pressEnter();
 
 	titleHeader("CLAPTRAPS DESTUCTORS");
