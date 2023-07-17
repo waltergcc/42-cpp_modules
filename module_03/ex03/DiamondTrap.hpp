@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 21:09:36 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/17 21:18:14 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/17 22:33:48 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 class	DiamondTrap : public ScavTrap, public FragTrap
 {
 	private:
-		std::string	name;
+		std::string name;
 
 	public:
 		// Constructors
 		DiamondTrap(void);
-		DiamondTrap(std::string const name);
+		DiamondTrap(std::string const diamondName);
 		DiamondTrap(DiamondTrap const &copy);
 		~DiamondTrap(void);
 
