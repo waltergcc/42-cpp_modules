@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/19 15:53:55 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/19 20:51:54 by wcorrea-         ###   ########.fr       */
+/*   Created: 2023/07/19 20:47:38 by wcorrea-          #+#    #+#             */
+/*   Updated: 2023/07/19 21:18:49 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 # include <iostream>
-# include "Animal.hpp"
-# include "Brain.hpp"
+# include <cstdlib>
 
-class Cat : public Animal
+class Brain
 {
 	private:
-		Brain *_brain;
-		
+		std::string ideas[100];
+
 	public:
 		// Constructors
-		Cat(void);
-		Cat(Cat const &src);
-		virtual ~Cat(void);
-
+		Brain(void);
+		Brain(Brain const &src);
+		virtual ~Brain(void);
+		
 		// Operators
-		Cat &operator=(Cat const &src);
+		Brain &operator=(Brain const &src);
 		
 		// Member functions
-		void makeSound(void) const;
-
-		// Getters
-		Brain *getBrain(void) const;
+		void	showIdeas(void) const;
 };
 
 #endif

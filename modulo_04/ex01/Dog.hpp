@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:43:01 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/19 15:51:13 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/19 20:52:01 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,13 @@
 
 # include <iostream>
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Dog : public Animal
 {
+	private:
+		Brain *_brain;
+		
 	public:
 		// Constructors
 		Dog(void);
@@ -28,7 +32,10 @@ class Dog : public Animal
 		Dog &operator=(Dog const &src);
 
 		// Member functions
-		void makeSound(void) const;	
+		void makeSound(void) const;
+
+		// Getters
+		Brain *getBrain(void) const;
 };
 
 #endif

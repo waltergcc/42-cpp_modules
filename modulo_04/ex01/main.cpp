@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:24:39 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/19 16:34:38 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/19 22:24:10 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,46 +39,44 @@ void titleHeader(const std::string& message)
 
 int main()
 {
-	titleHeader("SUBJECT TEST");
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	
-	delete meta;
-	delete j;
-	delete i;
+	titleHeader("ANIMAL ARRAY TEST");
+
+	Animal	*animals[6] =
+	{
+		new Dog(), new Dog(), new Dog(),
+		new Cat(), new Cat(), new Cat()
+	};
+
+	for (int i = 0; i < 6; i++)
+	{
+		std::cout << std::endl << "Destroy Animal " << i + 1 << std::endl;	
+		delete animals[i];
+	}
 	pressEnter();
 
-	titleHeader("COPY TEST");
-	const Animal *original = new Dog();
-	const Animal *pointToOriginal = original;
+	titleHeader("CAT DEEP COPY TEST");
+	Cat *original = new Cat();
+	Cat *copy = new Cat(*original);
 
-	std::cout << pointToOriginal->getType() << std::endl;
-	pointToOriginal->makeSound();
-
-	const Dog *otherOriginal = new Dog();
-	const Dog *newCopy = new Dog(*otherOriginal);
-
-	std::cout << otherOriginal->getType() << std::endl;
-	otherOriginal->makeSound();
-
-	std::cout << newCopy->getType() << std::endl;
-	newCopy->makeSound();
-
+	std::cout << std::endl << "Original's Brain Adress: " << original->getBrain() << std::endl;
+	original->getBrain()->showIdeas();
 	delete original;
-	delete otherOriginal;
-	delete newCopy;
+	
+	std::cout << std::endl << "Copy's Brain Adress: " << copy->getBrain() << std::endl;
+	copy->getBrain()->showIdeas();
+	delete copy;
 	pressEnter();
+	
+	titleHeader("DOG DEEP COPY TEST");
+	Dog *originalDog = new Dog();
+	Dog *copyDog = new Dog(*originalDog);
+	
+	std::cout << std::endl << "Original's Brain Adress: " << originalDog->getBrain() << std::endl;
+	originalDog->getBrain()->showIdeas();
+	delete originalDog;
 
-	titleHeader("WRONG ANIMAL TEST");
-	const WrongAnimal* cat = new WrongCat();
-	cat->makeSound();
-	delete cat;
+	std::cout << std::endl << "Copy's Brain Adress: " << copyDog->getBrain() << std::endl;
+	copyDog->getBrain()->showIdeas();
+	delete copyDog;
+	pressEnter();	
 }
