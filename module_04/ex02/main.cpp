@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:24:39 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/20 16:23:13 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/20 16:25:40 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,56 @@ int main()
 	titleHeader("INITIALIZE ABSTRACT OBJECTS");
 	std::cout << "You can't initialize an abstract object." << std::endl;
 	// Animal test;
+	pressEnter();
+
+	titleHeader("ANIMAL ARRAY TEST");
+
+	Animal	*animals[6] =
+	{
+		new Dog(), new Dog(), new Dog(),
+		new Cat(), new Cat(), new Cat()
+	};
+
+	for (int i = 0; i < 6; i++)
+	{
+		std::cout << std::endl << "Destroy Animal " << i + 1 << std::endl;	
+		delete animals[i];
+	}
+	pressEnter();
+
+	titleHeader("BASIC COPY TEST");
+	{
+		Dog basic;
+		Dog tmp = basic;
+		
+		std::cout << std::endl << "Basic's Brain Adress: " << basic.getBrain() << std::endl;
+		std::cout << "Tmp's Brain Adress  : " << tmp.getBrain() << std::endl << std::endl;
+	}
+	pressEnter();
+
+	titleHeader("CAT DEEP COPY TEST");
+	Cat *original = new Cat();
+	Cat *copy = new Cat(*original);
+
+	std::cout << std::endl << "Original's Brain Adress: " << original->getBrain() << std::endl;
+	original->getBrain()->showIdeas();
+	delete original;
+	
+	std::cout << std::endl << "Copy's Brain Adress: " << copy->getBrain() << std::endl;
+	copy->getBrain()->showIdeas();
+	delete copy;
+	pressEnter();
+	
+	titleHeader("DOG DEEP COPY TEST");
+	Dog *originalDog = new Dog();
+	Dog *copyDog = new Dog(*originalDog);
+	
+	std::cout << std::endl << "Original's Brain Adress: " << originalDog->getBrain() << std::endl;
+	originalDog->getBrain()->showIdeas();
+	delete originalDog;
+
+	std::cout << std::endl << "Copy's Brain Adress: " << copyDog->getBrain() << std::endl;
+	copyDog->getBrain()->showIdeas();
+	delete copyDog;
 	pressEnter();
 }
