@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:29:09 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/19 16:42:32 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/20 16:11:49 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Animal
 		void setType(std::string const type);
 	
 		// Member functions
-		virtual void makeSound(void) const;
+		virtual void makeSound(void) const = 0;
 };
 
 #endif
