@@ -6,13 +6,13 @@
 #    By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/07 17:07:34 by wcorrea-          #+#    #+#              #
-#    Updated: 2023/07/20 16:41:30 by wcorrea-         ###   ########.fr        #
+#    Updated: 2023/07/20 17:50:12 by wcorrea-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = interface&recap
+NAME = interface_recap
 
-SRC = main.cpp
+SRC = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 
 OBJS = ${SRC:.cpp=.o}
 

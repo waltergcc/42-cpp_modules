@@ -6,12 +6,17 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 16:44:27 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/20 16:45:04 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/20 17:04:45 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
+
+# include <iostream>
+# include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

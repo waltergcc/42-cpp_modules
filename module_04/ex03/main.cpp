@@ -6,9 +6,14 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 16:38:55 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/20 16:42:06 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/20 18:15:34 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Character.hpp"
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 void	pressEnter(void)
 {

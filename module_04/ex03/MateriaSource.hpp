@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/20 16:42:53 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/20 18:14:30 by wcorrea-         ###   ########.fr       */
+/*   Created: 2023/07/20 17:23:12 by wcorrea-          #+#    #+#             */
+/*   Updated: 2023/07/20 18:16:45 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-# include <iostream>
-# include "ICharacter.hpp"
+# include <cstring>
+# include "IMateriaSource.hpp"
 
-class ICharacter;
-class AMateria
+class MateriaSource : public IMateriaSource
 {
-	protected:
-		std::string	type;
+	private:
+		AMateria	*storage[4];
+		int			storageCount;	
 	
 	public:
 		// Constructors
-		AMateria(void);
-		AMateria(std::string const & type);
-		virtual ~AMateria(void);
+		MateriaSource(void);
+		MateriaSource(MateriaSource const & src);
+		~MateriaSource(void);
 
-		// Getters
-		std::string const & getType() const;
+		// Operators
+		MateriaSource & operator = (MateriaSource const & src);
 
 		// Member Functions
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+		void	learnMateria(AMateria* m);
+		AMateria* createMateria(std::string const & type);
 };
 
 #endif
