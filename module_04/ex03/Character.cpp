@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 17:11:35 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/20 17:22:23 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/20 19:19:17 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,12 @@ std::string const & Character::getName() const {return (this->name);}
 void	Character::equip(AMateria* m)
 {
 	if (this->inventoryCount > 3)
+	{
+		std::cout << this->name << " has no space to equip this " << m->getType() << std::endl;
+		if (m != NULL)
+			delete m;
 		return ;
+	}
 	std::cout << this->name << " equiped " << m->getType() << std::endl;
 	this->inventory[this->inventoryCount++] = m;
 }
@@ -95,7 +100,7 @@ void	Character::unequip(int idx)
 {
 	if (idx < 0 || idx > 3)
 		return ;
-	if (this->inventory[idx] == NULL || this->unequiped)
+	if (this->inventory[idx] == NULL || this->unequiped[idx] != NULL)
 	{
 		std::cout << this->name << " has nothing to unequip" << std::endl;
 		return ;

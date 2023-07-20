@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 16:38:55 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/20 18:15:34 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/20 19:16:49 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,71 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
+	pressEnter();
+
+	titleHeader("LEARN MATERIAS");
+	IMateriaSource	*newSrc = new MateriaSource();
+	newSrc->learnMateria(new Ice());
+	newSrc->learnMateria(new Cure());
+	pressEnter();
+	
+	titleHeader("CREATE CHARACTERS");
+	ICharacter	*mark = new Character("Mark S.");
+	std::cout << mark->getName() << std::endl;
+	ICharacter	*helly = new Character("Helly G.");
+	std::cout << helly->getName() << std::endl;
+	pressEnter();
+
+	titleHeader("CREATE AND EQUIP MATERIAS");
+	AMateria	*buffer;
+	for (int i = 0; i < 5; i++)
+	{
+		if (i > 0)
+			std::cout << std::endl;
+		std::cout << "Materia #" << i + 1 << ": ";
+		if (i % 2 == 0)
+			buffer = newSrc->createMateria("cure");
+		else
+			buffer = newSrc->createMateria("ice");
+		mark->equip(buffer);
+	}
+	pressEnter();
+	
+	titleHeader("USE MATERIAS");
+	for (int i = 0; i < 5; i++)
+		mark->use(i, *helly);
+	pressEnter();
+
+	titleHeader("UNEQUIP MATERIAS");
+	for (int i = 0; i < 6; i++)
+		mark->unequip(i);
+	pressEnter();
+	
+	titleHeader("DELETE MARK OBJECTS");
+	delete mark;
+	pressEnter();
+
+	titleHeader("DELETE HELLY OBJECT");
+	delete helly;
+	pressEnter();
+
+	titleHeader("DELETE NEW SRC OBJECT");
+	delete newSrc;
+	pressEnter();
+
+	titleHeader("DEEP COPY TEST");
+	IMateriaSource	*copySrc = new MateriaSource();
+	copySrc->learnMateria(new Ice());
+	copySrc->learnMateria(new Cure());
+
+	Ice	*original = new Ice();
+	Ice *copy = new Ice(*original);
+
+	std::cout << std::endl << "original: " << original << std::endl;
+	std::cout << "copy    : " << copy << std::endl << std::endl;
+	
+	delete	original;
+	delete	copy;
+	delete	copySrc;
 	pressEnter();
 }
