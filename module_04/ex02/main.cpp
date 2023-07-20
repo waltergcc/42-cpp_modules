@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:24:39 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/20 16:20:08 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/20 16:23:13 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ int main()
 
 	titleHeader("INITIALIZE ABSTRACT OBJECTS");
 	std::cout << "You can't initialize an abstract object." << std::endl;
-	// Animal abstractAnimal;
+	// Animal test;
 	pressEnter();
 }
