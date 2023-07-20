@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:24:39 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/19 22:24:10 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/20 16:00:37 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,16 @@ int main()
 	}
 	pressEnter();
 
+	titleHeader("BASIC COPY TEST");
+	{
+		Dog basic;
+		Dog tmp = basic;
+		
+		std::cout << std::endl << "Basic's Brain Adress: " << basic.getBrain() << std::endl;
+		std::cout << "Tmp's Brain Adress  : " << tmp.getBrain() << std::endl << std::endl;
+	}
+	pressEnter();
+
 	titleHeader("CAT DEEP COPY TEST");
 	Cat *original = new Cat();
 	Cat *copy = new Cat(*original);
@@ -78,5 +88,5 @@ int main()
 	std::cout << std::endl << "Copy's Brain Adress: " << copyDog->getBrain() << std::endl;
 	copyDog->getBrain()->showIdeas();
 	delete copyDog;
-	pressEnter();	
+	pressEnter();
 }
