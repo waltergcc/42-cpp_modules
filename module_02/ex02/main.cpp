@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 16:37:29 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/15 11:35:56 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/22 17:33:36 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,12 +90,19 @@ int	main(void)
 	pressEnter();
 
 	titleHeader("INCREMENT OPERATORS");
-    Fixed e = a++;
-    Fixed f = c--;
-	std::cout << "a = " << a << std::endl;
-	std::cout << "c = " << c << std::endl << std::endl;
-	std::cout << "e = a++\ne = " << e << std::endl;
-	std::cout << "f = c--\nf = " << f << std::endl;
+    Fixed e = a;
+    Fixed f = c;
+	std::cout << "e = " << e << std::endl;
+	std::cout << "f = " << f << std::endl << std::endl;
+	std::cout << "e++ = " << e++ << std::endl;
+	std::cout << "now e = " << e << std::endl;
+	std::cout << "++e = " << ++e << std::endl;
+	std::cout << "now e = " << e << std::endl;
+	std::cout << std::endl;
+	std::cout << "f-- = " << f-- << std::endl;
+	std::cout << "now f = " << f << std::endl;
+	std::cout << "--f = " << --f << std::endl;
+	std::cout << "now f = " << f << std::endl;
 	pressEnter();
 
 	titleHeader("MIN AND MAX");
