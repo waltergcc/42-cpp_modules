@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 18:45:06 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/24 22:11:51 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/24 23:52:24 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@
 FragTrap::FragTrap(void)
 {
 	std::cout << "FragTrap default constructor called" << std::endl;
-	this->_hitPoints = 100;
-	this->_energyPoints = 100;
-	this->_attackDamage = 30;
+	this->_hitPoints = this->initHit;
+	this->_energyPoints = this->initEnergy;
+	this->_attackDamage = this->initDamage;
 }
 
 FragTrap::FragTrap(std::string const name) : ClapTrap(name)
 {
 	std::cout << "FragTrap constructor with parameter called" << std::endl;
-	this->_hitPoints = 100;
-	this->_energyPoints = 100;
-	this->_attackDamage = 30;
+	this->_hitPoints = this->initHit;
+	this->_energyPoints = this->initEnergy;
+	this->_attackDamage = this->initDamage;
 }
 
 FragTrap::FragTrap(FragTrap const &copy) : ClapTrap(copy)

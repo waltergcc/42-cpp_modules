@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 17:30:12 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/24 16:54:03 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/24 23:54:52 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 
 class	ScavTrap : virtual public ClapTrap
 {
+	protected:
+		static int const initHit = 100;
+		static int const initEnergy = 50;
+		static int const initDamage = 20;
+		
 	public:
 		// Constructors 
 		ScavTrap(void);
