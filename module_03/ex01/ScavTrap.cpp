@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:43:19 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/17 18:26:27 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/24 22:03:03 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	ScavTrap::attack(std::string const &target)
 		std::cout << "ScavTrap " << this->_name << " is out of action!" << std::endl;
 		return ;
 	}
-	std::cout << "ScavTrap " << this->_name << " attacks " << target;
+	std::cout << "ScavTrap " << this->_name << " bombs " << target;
 	std::cout << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
 	this->_energyPoints--;
 }
