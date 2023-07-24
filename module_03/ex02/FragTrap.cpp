@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 18:45:06 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/17 20:02:31 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/24 22:11:38 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	FragTrap::attack(std::string const &target)
 		std::cout << "FragTrap " << this->_name << " is out of action!" << std::endl;
 		return ;
 	}
-	std::cout << "FragTrap " << this->_name << " attacks " << target;
+	std::cout << "FragTrap " << this->_name << " bombs " << target;
 	std::cout << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
 	this->_energyPoints--;
 }
