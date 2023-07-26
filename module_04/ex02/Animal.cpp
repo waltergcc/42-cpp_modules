@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:33:50 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/26 09:14:03 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/26 22:39:10 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,3 @@ Animal &Animal::operator=(Animal const &src)
 
 std::string Animal::getType(void) const {return (this->type);}
 void Animal::setType(std::string const type) {this->type = type;}
-
-// Member functions
-
-void Animal::makeSound(void) const
-{
-	std::cout << "Animal: ..." << std::endl;
-}
