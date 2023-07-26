@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 16:38:55 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/20 19:16:49 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/26 23:46:07 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,14 +118,16 @@ int main()
 	copySrc->learnMateria(new Ice());
 	copySrc->learnMateria(new Cure());
 
-	Ice	*original = new Ice();
-	Ice *copy = new Ice(*original);
-
-	std::cout << std::endl << "original: " << original << std::endl;
-	std::cout << "copy    : " << copy << std::endl << std::endl;
+	Ice	*basic = new Ice();
+	Ice *temp = new Ice(*basic);
 	
-	delete	original;
-	delete	copy;
+	std::cout << std::endl << "temp : " << temp << " | type: " << temp->getType() << std::endl;
+	delete	temp;
+	
+	std::cout << std::endl << "basic: " << basic << " | type: " << basic->getType() << std::endl;
+	delete	basic;
+	
+	std::cout << std::endl;
 	delete	copySrc;
 	pressEnter();
 }
