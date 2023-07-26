@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:24:39 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/07/20 16:00:37 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/07/26 16:16:58 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,11 @@ int main()
 	titleHeader("BASIC COPY TEST");
 	{
 		Dog basic;
-		Dog tmp = basic;
-		
+		{
+			Dog tmp = basic;
+			std::cout << std::endl << "Tmp's Brain Adress  : " << tmp.getBrain() << std::endl;
+		}
 		std::cout << std::endl << "Basic's Brain Adress: " << basic.getBrain() << std::endl;
-		std::cout << "Tmp's Brain Adress  : " << tmp.getBrain() << std::endl << std::endl;
 	}
 	pressEnter();
 
