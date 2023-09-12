@@ -10,4 +10,5 @@
 | [Module 05](https://github.com/waltergcc/42-cpp_modules/tree/main/module_05) | 100 |
 | [Module 06](https://github.com/waltergcc/42-cpp_modules/tree/main/module_06) | 100 |
 | [Module 07](https://github.com/waltergcc/42-cpp_modules/tree/main/module_07) | 100 |
+| [Module 08](https://github.com/waltergcc/42-cpp_modules/tree/main/module_08) | 100 |
 
