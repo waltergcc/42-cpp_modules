@@ -2,7 +2,7 @@
 
 the C++ modules are a series of projects that introduce the C++ language and its standard library. The projects are designed to be independent and progressively more complex. The modules are designed to be completed in order.
 
-## Features Learned in Each Module
+## Learning Path
 - **Module 00:** Classes, Member functions, private and public atributes, getters and setters.
 - **Module 01:** Memory allocation, Stack and Heap, References, Pointers to members, File streams, switch case.
 - **Module 02:** Ad-hoc polymorphism, Operator overload, canonical classes.
